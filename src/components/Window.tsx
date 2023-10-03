@@ -1,4 +1,5 @@
 import type { JSXElement } from "solid-js";
+import Clippy from "./Clippy";
 
 export default function Window(props: { children: JSXElement }) {
   return (
@@ -23,7 +24,7 @@ export default function Window(props: { children: JSXElement }) {
         <div>
           {props.children}
         </div>
-        <img src="clippy.webp" alt="Clippy" class="w-10 ml-auto mr-5 mb-5" />
+        <Clippy />
       </section>
       <footer class="bg-zinc-300 pt-1 flex items-center justify-between text-sm">
         <ul class="flex gap-2">
@@ -46,7 +47,7 @@ export default function Window(props: { children: JSXElement }) {
 
 function WindowButton(props: { children: JSXElement }) {
   return (
-    <button class="bg-zinc-300 h-6 w-6 border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center justify-center font-bold hover:border-t-black hover:border-l-black hover:border-zinc-100">
+    <button class="bg-zinc-300 h-6 w-6 border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center justify-center font-bold hover:border-t-black hover:border-l-black hover:border-zinc-100 transition">
       {props.children}
     </button>
   );
@@ -55,7 +56,7 @@ function WindowButton(props: { children: JSXElement }) {
 function FooterButton(props: { children: JSXElement }) {
   return (
     <li>
-      <button class="bg-zinc-300 px-1 border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center gap-1 hover:border-t-black hover:border-l-black hover:border-zinc-100">
+      <button class="bg-zinc-300 px-1 border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center gap-1 hover:border-t-black hover:border-l-black hover:border-zinc-100 transition">
         {props.children}
       </button>
     </li>
