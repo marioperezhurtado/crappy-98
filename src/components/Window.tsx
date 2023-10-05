@@ -2,13 +2,12 @@ import { A, Title } from "solid-start";
 import type { JSXElement } from "solid-js";
 import type { AnchorProps } from "@solidjs/router";
 import Clippy from "./Clippy";
-import styles from "./Window.module.css";
 
 export default function Window(props: { title: string, children: JSXElement }) {
   return (
     <>
       <Title>{props.title} | Crappy Games</Title>
-      <main class="bg-zinc-300 h-screen p-1.5 flex flex-col">
+      <main class="bg-zinc-300 h-screen overflow-hidden p-1.5 flex flex-col">
         <header class="bg-zinc-300">
           <div class="bg-gradient-to-r from-blue-900 via-blue-900 to-blue-600 text-white p-1 pl-2 flex justify-between items-center">
             <h1>{props.title} - Crappy Games</h1>
@@ -63,7 +62,7 @@ function ProgramButton(props: AnchorProps) {
       <A
         href={props.href}
         class="bg-zinc-300 px-1 border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center gap-1 hover:border-t-black hover:border-l-black hover:border-zinc-100 transition"
-        activeClass={`border-zinc-100 !border-t-black !border-l-black ${styles["program-active"]}`}>
+        activeClass="border-zinc-100 !border-t-black !border-l-black bg-mesh">
         {props.children}
       </A>
     </li>

@@ -6,7 +6,10 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xs': "500px",
+        "xs": "500px",
+      },
+      backgroundImage: {
+        "mesh": 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8cODAf3t7ewbG/////z948CADAFuqCj64BtLKAAAAAElFTkSuQmCC")',
       },
     },
   },
