@@ -35,7 +35,7 @@ export default function Canvas(props: { color: string, size: number }) {
 
   return (
     <canvas
-      class="border-2 border-zinc-400 flex-grow"
+      class="flex-1"
       ref={canvas}
       onPointerDown={(e) => {
         const coords = get_coords(e);

@@ -6,11 +6,11 @@ import Clippy from "./Clippy";
 export default function Window(props: { title: string, children: JSXElement }) {
   return (
     <>
-      <Title>{props.title} | Crappy Games</Title>
-      <main class="bg-zinc-300 h-screen overflow-hidden p-1.5 flex flex-col">
+      <Title>{props.title} | Crappy 98</Title>
+      <main class="bg-zinc-300 h-screen overflow-hidden p-1.5 flex flex-col select-none">
         <header class="bg-zinc-300">
           <div class="bg-gradient-to-r from-blue-900 via-blue-900 to-blue-600 text-white p-1 pl-2 flex justify-between items-center">
-            <h1>{props.title} - Crappy Games</h1>
+            <h1>{props.title} - Crappy 98</h1>
             <div class="flex gap-2 text-black">
               <WindowButton>_</WindowButton>
               <WindowButton>[]</WindowButton>
@@ -26,7 +26,6 @@ export default function Window(props: { title: string, children: JSXElement }) {
         </header>
         <section class="flex-grow h-full border-2 border-zinc-100 border-t-black border-l-black">
           {props.children}
-          <Clippy />
         </section>
         <footer class="bg-zinc-300 pt-1 flex items-center justify-between text-sm">
           <ul class="flex gap-2">
