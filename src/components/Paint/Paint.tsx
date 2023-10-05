@@ -8,10 +8,11 @@ export default function Paint() {
     <div class="flex flex-col h-full">
       <div class="flex flex-grow">
         <ToolBox />
-        <Canvas size={tool().size} color={primaryColor()} />
+        <div style={{ cursor: `url(${tool().cursor}), auto` }}>
+          <Canvas size={tool().size} color={primaryColor()} />
+        </div>
       </div>
       <ColorSelector />
     </div>
   );
 }
-
