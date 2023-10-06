@@ -56,13 +56,14 @@ export default function Canvas(props: CanvasProps) {
       onPointerUp={() => setPrevious(null)}
       onPointerMove={(e) => {
         const coords = get_coords(e);
-        if (!context || !previous()) return;
+        const prev = previous();
+        if (!context || !prev) return;
 
         context.strokeStyle = props.color;
         context.lineWidth = props.size;
         context.lineCap = 'round';
         context.beginPath();
-        context.moveTo(previous().x, previous().y);
+        context.moveTo(prev.x, prev.y);
         context.lineTo(coords.x, coords.y);
         context.stroke();
         setPrevious(coords);

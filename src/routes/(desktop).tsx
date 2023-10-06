@@ -4,9 +4,9 @@ import DesktopIcon from "~/components/Desktop/DesktopIcon";
 import Welcome from "~/components/Desktop/Welcome";
 import Clippy from "~/components/Clippy";
 
-export default function Home() {
-  const [showWelcome, setShowWelcome] = createSignal(true);
+const [showWelcome, setShowWelcome] = createSignal(true);
 
+export default function Home() {
   return (
     <>
       <main class="h-screen overflow-hidden flex flex-col select-none">
