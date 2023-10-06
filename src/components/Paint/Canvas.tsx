@@ -1,9 +1,14 @@
 import { createSignal, onMount } from "solid-js";
 
-export default function Canvas(props: { color: string, size: number }) {
+type CanvasProps = {
+  color: string;
+  size: number;
+};
+
+export default function Canvas(props: CanvasProps) {
+  const [previous, setPrevious] = createSignal<{ x: number, y: number } | null>(null);
   let canvas: HTMLCanvasElement | undefined;
   let context: CanvasRenderingContext2D | null;
-  const [previous, setPrevious] = createSignal<{ x: number, y: number } | null>(null);
 
   function get_coords(e: PointerEvent) {
     if (!canvas) return { x: 0, y: 0 };
