@@ -110,7 +110,7 @@ function DisplayCard(props: { suit: Suit, rank: number, icon: string }) {
       {/* Jack */}
       <Show when={props.rank === 11}>
         <img
-          src="/jack.webp"
+          src="/solitaire/jack.webp"
           class="border-2 w-[84px] h-36 border-black object-cover
           absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           width="84"
@@ -125,7 +125,7 @@ function DisplayCard(props: { suit: Suit, rank: number, icon: string }) {
       {/* Queen */}
       <Show when={props.rank === 12}>
         <img
-          src="/queen.webp"
+          src="/solitaire/queen.webp"
           class="border-2 w-[84px] h-36 border-black object-cover
           absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           width="84"
@@ -140,7 +140,7 @@ function DisplayCard(props: { suit: Suit, rank: number, icon: string }) {
       {/* King */}
       <Show when={props.rank === 13}>
         <img
-          src="/king.webp"
+          src="/solitaire/king.webp"
           class="border-2 w-[84px] h-36 border-black object-cover
           absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           width="84"

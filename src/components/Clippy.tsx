@@ -41,19 +41,27 @@ export default function Clippy() {
   });
 
   return (
-      <div class="fixed right-7 bottom-12">
-        <div class="relative">
+    <div class="fixed right-7 bottom-12">
+      <div class="relative">
         <img
           ref={clippy}
-          src="clippy.webp"
+          src="/clippy/clippy.webp"
           alt="Clippy"
           class="w-10"
         />
-        <img src="eye.webp" alt="Clippy's eye" class="w-3.5 absolute top-4 left-0.5"
-          style={{ transform: `rotate(${rotation()}deg)` }} />
-        <img src="eye.webp" alt="Clippy's eye" class="w-3.5 absolute top-5 right-1"
-          style={{ transform: `rotate(${rotation()}deg)` }} />
-          </div>
+        <img 
+          src="/clippy/eye.webp"
+          alt="Clippy's eye"
+          class="w-3.5 absolute top-4 left-0.5"
+          style={{ transform: `rotate(${rotation()}deg)` }}
+        />
+        <img
+          src="/clippy/eye.webp"
+          alt="Clippy's eye"
+          class="w-3.5 absolute top-5 right-1"
+          style={{ transform: `rotate(${rotation()}deg)` }}
+        />
       </div>
+    </div>
   );
 }

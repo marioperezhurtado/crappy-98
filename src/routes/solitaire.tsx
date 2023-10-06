@@ -1,11 +1,9 @@
 import Card from "~/components/Solitaire/Card";
 import Window from "~/components/Window";
-import Clippy from "~/components/Clippy";
 
-export default function Solitaire() {
+export default function SolitairePage() {
   return (
-    <>
-      <Window title="Solitaire">
+      <Window title="Solitaire" icon="/solitaire/logo.webp">
         <div class="pt-20 bg-[#008003] h-full">
           <div class="flex flex-wrap gap-2 ml-5">
             <Card suit="spades" rank={1} />
@@ -24,7 +22,5 @@ export default function Solitaire() {
           </div>
         </div>
       </Window>
-      <Clippy />
-    </>
   );
 }

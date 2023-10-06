@@ -18,10 +18,10 @@ export default function Root() {
   return (
     <Html lang="en">
       <Head>
-        <Title>Crappy Games</Title>
+        <Title>Crappy 98</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Link rel="icon" href="clippy.webp" />
+        <Link rel="icon" href="/windows.png" />
         <Link rel="preconnect" href="https://fonts.googleapis.com" />
         <Link rel="preconnect" href="https://fonts.gstatic.com" />
         <Link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />

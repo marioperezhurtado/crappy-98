@@ -1,6 +1,6 @@
-.cylinder {
+.checker {
   /* this variable will define how much ci*/
-  --r: 10px;
+  --r: 12px;
   /* whatever values/units you want */
   background: 
     radial-gradient(50% var(--r) at 50% var(--r), #0003 99.99%, #0000 0),

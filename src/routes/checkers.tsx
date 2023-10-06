@@ -1,12 +1,10 @@
 import Window from "~/components/Window";
 import Board from "~/components/Checkers/Board";
 
-export default function Home() {
+export default function CheckersPage() {
   return (
-      <Window title="Checkers">
+      <Window title="Checkers" icon="/checkers/logo.png">
         <div class="pt-20 bg-white h-full">
-          <h1 class="sr-only">Crappy Games</h1>
-          <img src="crappy-games.png" alt="Crappy Games" class="w-96 mx-auto" />
           <Board />
         </div>
       </Window>
