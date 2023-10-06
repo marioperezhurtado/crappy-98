@@ -1,20 +1,21 @@
-import { A, type AnchorProps } from "@solidjs/router";
+import { createSignal, onCleanup } from "solid-js";
 import { useLocation } from "solid-start";
+import { A, type AnchorProps } from "@solidjs/router";
 
 export default function Taskbar() {
   return (
     <footer class="bg-zinc-300 pt-1.5 flex items-center justify-between text-sm">
       <ul class="flex gap-2">
-        <ProgramButton href="/" title="Start" icon="windows.png"/>
-        <ProgramButton href="/checkers" title="Checkers" icon="/checkers/logo.png"/>
-        <ProgramButton href="/solitaire" title="Solitaire" icon="/solitaire/logo.webp"/>
-        <ProgramButton href="/paint" title="Paint" icon="/paint/logo.png"/>
+        <ProgramButton href="/" title="Start" icon="windows.png" />
+        <Separator />
+        <ProgramButton href="/checkers" title="Checkers" icon="/checkers/logo.png" />
+        <ProgramButton href="/solitaire" title="Solitaire" icon="/solitaire/logo.webp" />
+        <ProgramButton href="/paint" title="Paint" icon="/paint/logo.png" />
       </ul>
-      <p class="mr-1">Made with ❤️ by
-        <A href="https://marioph.com" target="_blank" class="underline ml-2">
-          Mario
-        </A>
-      </p>
+      <div class="flex gap-2 items-center">
+        <Separator />
+          <Time />
+      </div>
     </footer>
   );
 }
@@ -35,4 +36,26 @@ function ProgramButton(props: AnchorProps & { title: string, icon: string }) {
       </A>
     </li>
   );
+}
+
+function Separator() {
+  return <span class="border-l-2 border-r-2 border-l-zinc-400 w-px h-6 bg-red-500" />;
+}
+
+function Time() {
+  const [time, setTime] = createSignal(new Date());
+  const interval = setInterval(() => setTime(new Date()), 1000 * 5);
+
+  onCleanup(() => clearInterval(interval));
+
+  return <p>{displayTime(time())}</p>;
+}
+
+// -> 8:30 PM
+function displayTime(date: Date) {
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const ampm = hours >= 12 ? "PM" : "AM";
+
+  return `${(hours % 12)}:${minutes.toString().padStart(2, "0")} ${ampm}`;
 }

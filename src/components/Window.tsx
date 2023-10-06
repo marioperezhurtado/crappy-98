@@ -38,7 +38,7 @@ export default function Window(props: { title: string, icon: string, children: J
 
 function WindowButton(props: { children: JSXElement }) {
   return (
-    <button class="bg-zinc-300 h-6 w-6 border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center justify-center font-bold hover:border-t-black hover:border-l-black hover:border-zinc-100 transition">
+    <button class="bg-zinc-300 w-6 h-6 aspect-square border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center justify-center font-bold">
       {props.children}
     </button>
   );
