@@ -3,7 +3,7 @@ import { createSignal, onMount, onCleanup } from "solid-js";
 export default function Clippy() {
   const [mousePos, setMousePos] = createSignal({ x: 0, y: 0 });
   const [rekt, setRekt] = createSignal({ left: 0, top: 0, width: 0, height: 0 });
-  const anchorX = () => rekt().left + rekt().width / 2;
+  const anchorX = () => rekt().left + rekt().width / 2 - 5;
   const anchorY = () => rekt().top + rekt().height / 2 - 16;
   const rotation = () => calculateRotation();
 
@@ -41,24 +41,24 @@ export default function Clippy() {
   });
 
   return (
-    <div class="fixed right-7 bottom-12">
+    <div class="fixed right-5 bottom-12">
       <div class="relative">
         <img
           ref={clippy}
           src="/clippy/clippy.webp"
           alt="Clippy"
-          class="w-10"
+          class="w-20"
         />
         <img 
           src="/clippy/eye.webp"
           alt="Clippy's eye"
-          class="w-3.5 absolute top-4 left-0.5"
+          class="w-3 absolute top-[0.9rem] left-[1rem]"
           style={{ transform: `rotate(${rotation()}deg)` }}
         />
         <img
           src="/clippy/eye.webp"
           alt="Clippy's eye"
-          class="w-3.5 absolute top-5 right-1"
+          class="w-3 absolute top-[1.1rem] right-[2.1rem]"
           style={{ transform: `rotate(${rotation()}deg)` }}
         />
       </div>
