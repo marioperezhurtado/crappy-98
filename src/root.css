@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Windows";
+  src: url('/fonts/windows.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Digital-Clock";
+  src: url('/fonts/digital-clock.otf') format('opentype');
+}
+
 body {
-  font-family: 'DotGothic16', sans-serif;
+  font-family: 'Windows', sans-serif;
+}
+
+/* Fix font extra bottom space */
+h1, h2, h3, h4, h5, h6, p, span, a, input, textarea, button {
+  padding-top: 0.25em;
 }

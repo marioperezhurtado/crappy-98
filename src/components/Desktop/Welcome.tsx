@@ -64,7 +64,7 @@ export default function Welcome(props: { onClose: () => void }) {
               <ContentItem color="#FFCE00" title="Maintain Your Computer" />
             </section>
 
-            <section class="flex flex-col gap-4 leading-5 text-sm">
+            <section class="flex flex-col gap-3 leading-5">
               <h1 class="font-bold text-lg tracking-wider">Welcome</h1>
               <p>Welcome to the exciting new world of Crappy 98, where your web browser takes a nostalgic trip back in time!
               </p>
@@ -100,7 +100,7 @@ function ContentItem(props: { color: string, title: string }) {
   return (
     <div class="flex gap-3 border-b-2 pr-3 border-zinc-300">
       <span class="w-1" style={{ "background-color": props.color }} />
-      <h2 class="font-bold text-sm py-1">{props.title}</h2>
+      <h2 class="font-bold text-sm">{props.title}</h2>
     </div>
   );
 }

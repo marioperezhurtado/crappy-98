@@ -8,6 +8,9 @@ export default {
       screens: {
         "xs": "500px",
       },
+      fontFamily: {
+        "digital": ["Digital-Clock"],
+      },
       backgroundImage: {
         "mesh": 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8cODAf3t7ewbG/////z948CADAFuqCj64BtLKAAAAAElFTkSuQmCC")',
       },

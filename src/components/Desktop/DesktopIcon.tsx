@@ -17,7 +17,7 @@ export default function DesktopIcon(props: DesktopIconProps) {
         width="40"
         draggable={false}
       />
-      <p class="text-xs text-white text-center">{props.title}</p>
+      <p class="text-sm text-white text-center">{props.title}</p>
       <Show when={props.href}>
         <img
           src="/desktop/shortcut.png"
