@@ -12,7 +12,7 @@ export default function Window(props: { title: string, icon: string, children: J
           <div class="bg-gradient-to-r from-blue-900 via-blue-900 to-blue-600 text-white p-1 pl-2 flex justify-between items-center">
             <div class="flex gap-2 items-center">
               <img src={props.icon} alt={props.title} class="h-4" />
-              <h1>{props.title} - Crappy 98</h1>
+              <h1>{props.title}</h1>
             </div>
             <div class="flex gap-2 text-black">
               <WindowButton>_</WindowButton>

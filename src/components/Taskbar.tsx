@@ -8,13 +8,30 @@ export default function Taskbar() {
       <ul class="flex gap-2">
         <ProgramButton href="/" title="Start" icon="windows.png" />
         <Separator />
-        <ProgramButton href="/checkers" title="Checkers" icon="/checkers/logo.png" />
-        <ProgramButton href="/solitaire" title="Solitaire" icon="/solitaire/logo.webp" />
-        <ProgramButton href="/paint" title="Paint" icon="/paint/logo.png" />
+        <ProgramButton
+          href="/checkers"
+          title="Checkers"
+          icon="/checkers/logo.png"
+        />
+        <ProgramButton
+          href="/solitaire"
+          title="Solitaire"
+          icon="/solitaire/logo.webp"
+        />
+        <ProgramButton
+          href="/minesweeper"
+          title="MineSweeper"
+          icon="/minesweeper/logo.webp"
+        />
+        <ProgramButton
+          href="/paint"
+          title="Paint"
+          icon="/paint/logo.png"
+        />
       </ul>
       <div class="flex gap-2 items-center">
         <Separator />
-          <Time />
+        <Time />
       </div>
     </footer>
   );
@@ -31,7 +48,13 @@ function ProgramButton(props: AnchorProps & { title: string, icon: string }) {
         classList={{
           "border-zinc-100 !border-t-black !border-l-black bg-mesh": isActive
         }}>
-        <img src={props.icon} alt={props.title} class="h-4" />
+        <img
+          src={props.icon}
+          alt={props.title}
+          class="h-4 w-4 object-contain"
+          height="16"
+          width="16"
+        />
         {props.title}
       </A>
     </li>

@@ -2,7 +2,7 @@ import { createSignal, Show } from "solid-js";
 import Taskbar from "~/components/Taskbar";
 import DesktopIcon from "~/components/Desktop/DesktopIcon";
 import Welcome from "~/components/Desktop/Welcome";
-import Clippy from "~/components/Clippy";
+import Clippy from "~/components/Clippy/Clippy";
 
 const [showWelcome, setShowWelcome] = createSignal(true);
 
@@ -25,6 +25,11 @@ export default function Home() {
               icon="/solitaire/logo.webp"
               title="Solitaire"
               href="/solitaire"
+            />
+            <DesktopIcon
+              icon="/minesweeper/logo.webp"
+              title="MineSweeper"
+              href="/minesweeper"
             />
             <DesktopIcon
               icon="/paint/logo.png"

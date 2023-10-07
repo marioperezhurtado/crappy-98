@@ -12,7 +12,9 @@ export default function DesktopIcon(props: DesktopIconProps) {
       <img
         src={props.icon}
         alt={props.title}
-        class="h-8 w-10 object-contain object-top"
+        class="h-8 w-10 object-contain"
+        height="32"
+        width="40"
         draggable={false}
       />
       <p class="text-xs text-white text-center">{props.title}</p>
@@ -21,6 +23,8 @@ export default function DesktopIcon(props: DesktopIconProps) {
           src="/desktop/shortcut.png"
           alt="Shortcut"
           class="h-10 w-10 absolute -top-2.5 left-3"
+          height="40"
+          width="40"
           draggable={false}
         />
       </Show>

@@ -1,0 +1,19 @@
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 12px 12px 0;
+  border-color: transparent black transparent transparent;
+}
+
+.triangle:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-style: solid;
+  border-width: 0 10px 10px 0;
+  border-color: transparent #FEF9C3 transparent transparent;
+  top: 0;
+  left: 1px;
+}
