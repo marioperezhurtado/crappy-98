@@ -1,6 +1,7 @@
-import { createSignal, onCleanup } from "solid-js";
+import { createSignal, onCleanup, For } from "solid-js";
 import { useLocation } from "solid-start";
 import { A, type AnchorProps } from "@solidjs/router";
+import { programs } from "~/data/programs";
 
 export default function Taskbar() {
   return (
@@ -8,26 +9,9 @@ export default function Taskbar() {
       <ul class="flex gap-2">
         <ProgramButton href="/" title="Start" icon="windows.png" />
         <Separator />
-        <ProgramButton
-          href="/checkers"
-          title="Checkers"
-          icon="/checkers/logo.png"
-        />
-        <ProgramButton
-          href="/solitaire"
-          title="Solitaire"
-          icon="/solitaire/logo.webp"
-        />
-        <ProgramButton
-          href="/minesweeper"
-          title="MineSweeper"
-          icon="/minesweeper/logo.webp"
-        />
-        <ProgramButton
-          href="/paint"
-          title="Paint"
-          icon="/paint/logo.png"
-        />
+        <For each={programs}>
+          {(program) => <ProgramButton {...program} />}
+        </For>
       </ul>
       <div class="flex gap-2 items-center">
         <Separator />

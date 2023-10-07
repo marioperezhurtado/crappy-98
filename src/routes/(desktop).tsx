@@ -1,4 +1,5 @@
-import { createSignal, Show } from "solid-js";
+import { createSignal, Show, For } from "solid-js";
+import { programs } from "~/data/programs";
 import Taskbar from "~/components/Taskbar";
 import DesktopIcon from "~/components/Desktop/DesktopIcon";
 import Welcome from "~/components/Desktop/Welcome";
@@ -16,27 +17,20 @@ export default function Home() {
             <DesktopIcon icon="/desktop/computer.png" title="Computer" />
             <DesktopIcon icon="/desktop/documents.png" title="Documents" />
             <DesktopIcon icon="/desktop/internet.png" title="Internet Explorer" />
-            <DesktopIcon
-              icon="/checkers/logo.png"
-              title="Checkers"
-              href="/checkers"
-            />
-            <DesktopIcon
-              icon="/solitaire/logo.webp"
-              title="Solitaire"
-              href="/solitaire"
-            />
-            <DesktopIcon
-              icon="/minesweeper/logo.webp"
-              title="MineSweeper"
-              href="/minesweeper"
-            />
-            <DesktopIcon
-              icon="/paint/logo.png"
-              title="Paint"
-              href="/paint"
-            />
+            <For each={programs}>
+              {(program) => <DesktopIcon {...program} />}
+            </For>
           </div>
+          <p class="fixed top-2 right-4 text-white">
+            Made with ♥ by
+            <a
+              href="https://marioph.com"
+              target="_blank"
+              class="underline ml-1"
+            >
+              Mario
+            </a>
+          </p>
         </div>
         <div class="p-1.5 pt-0 bg-zinc-300 border-t-2">
           <Taskbar />

@@ -55,9 +55,9 @@ export default function Welcome(props: { onClose: () => void }) {
 
           <div class="flex gap-5 items-start pr-3 pt-5">
             <section class="w-56 min-w-fit">
-              <div class="bg-black text-white pl-4 tracking-[0.4rem] text-xs py-0.5 border-b-2 border-zinc-300">
+              <p class="bg-black text-white pl-4 tracking-[0.4rem] text-xs border-b-2 border-zinc-300">
                 CONTENTS
-              </div>
+              </p>
               <ContentItem color="#009CFF" title="Register Now" />
               <ContentItem color="#FF3100" title="Connect to the Internet" />
               <ContentItem color="#6BCE39" title="Discover Crappy 98" />
