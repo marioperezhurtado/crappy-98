@@ -14,7 +14,7 @@ export default function Card(props: { suit: Suit, rank: number }) {
 
   return (
     <div
-      class="relative w-32 aspect-[2.5/3.5] bg-white border-black border-2 rounded-lg font-bold shadow-md"
+      class="relative w-32 aspect-[2.5/3.5] bg-white border-black border-2 rounded-lg font-bold shadow-md text-digital"
       classList={{ "text-red-500": props.suit === "hearts" || props.suit === "diamonds" }}
     >
       <RankLabel {...props} icon={icon} />

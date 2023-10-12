@@ -1,4 +1,4 @@
-import { Title, Link } from "solid-start";
+import { Title, Link, A } from "solid-start";
 import type { JSXElement } from "solid-js";
 import Taskbar from "./Taskbar";
 
@@ -14,10 +14,16 @@ export default function Window(props: { title: string, icon: string, children: J
               <img src={props.icon} alt={props.title} class="h-4" />
               <h1>{props.title}</h1>
             </div>
-            <div class="flex gap-2 text-black">
-              <WindowButton>_</WindowButton>
-              <WindowButton>[]</WindowButton>
-              <WindowButton>x</WindowButton>
+            <div class="flex gap-2 text-black items-center">
+              <WindowButton>
+                <img src="/window/minimize.svg" alt="Minimize" class="-mt-2" />
+              </WindowButton>
+              <WindowButton>
+                <img src="/window/maximize.svg" alt="Maximize" class="-mt-1" />
+              </WindowButton>
+              <WindowButton href="/">
+                <img src="/window/close.svg" alt="Close" class="-mt-1" />
+              </WindowButton>
             </div>
           </div>
           <nav class="flex gap-3 px-1 py-0.5 text-sm">
@@ -36,10 +42,12 @@ export default function Window(props: { title: string, icon: string, children: J
   );
 }
 
-function WindowButton(props: { children: JSXElement }) {
+function WindowButton(props: {href?: string, children: JSXElement}) {
   return (
-    <button class="bg-zinc-300 w-6 h-6 aspect-square border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center justify-center font-bold">
+    <A
+      href={props.href ?? "#"}
+      class="bg-zinc-300 w-6 h-6 aspect-square border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center justify-center font-bold">
       {props.children}
-    </button>
+    </A>
   );
 }

@@ -29,7 +29,7 @@ export default function Welcome(props: { onClose: () => void }) {
           <button
             onClick={handleClose}
             class="bg-zinc-300 w-5 h-5 aspect-square border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center justify-center font-bold">
-            x
+            <img src="/window/close.svg" alt="Close" class="-mt-1" />
           </button>
         </header>
 

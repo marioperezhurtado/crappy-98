@@ -62,11 +62,11 @@ export default function Clippy() {
           class="w-3 absolute top-[1.1rem] right-[2.1rem] z-20"
           style={{ transform: `rotate(${rotation()}deg)` }}
         />
-        <div class="absolute right-0 -top-full translate-y-3 bg-yellow-100 p-2 pb-4 rounded-md border border-black shadow-md w-44">
+        <div class="absolute right-0 -top-full translate-y-3 bg-yellow-100 p-2 rounded-md border border-black shadow-md w-44">
           <p class="text-xs">
             Hi! It's me, Clippy. It's been a while, hasn't it? I'm glad to see you again!
           </p>
-          <div class={`absolute -bottom-3 left-24 ${styles.triangle}`}/>
+          <div class={`absolute -bottom-3 left-24 ${styles.triangle}`} />
         </div>
       </div>
     </div>
