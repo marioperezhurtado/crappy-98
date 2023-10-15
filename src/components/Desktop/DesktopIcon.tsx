@@ -8,21 +8,21 @@ type DesktopIconProps = {
 
 export default function DesktopIcon(props: DesktopIconProps) {
   return (
-    <a href={props.href} class="relative flex flex-col items-center w-20">
+    <a href={props.href} class="flex relative flex-col items-center w-20">
       <img
         src={props.icon}
         alt={props.title}
-        class="h-8 w-10 object-contain"
+        class="object-contain w-10 h-8"
         height="32"
         width="40"
         draggable={false}
       />
-      <p class="text-sm text-white text-center">{props.title}</p>
+      <p class="text-sm text-center text-white">{props.title}</p>
       <Show when={props.href}>
         <img
           src="/desktop/shortcut.png"
           alt="Shortcut"
-          class="h-10 w-10 absolute -top-2.5 left-3"
+          class="absolute -top-2.5 left-3 w-10 h-10"
           height="40"
           width="40"
           draggable={false}

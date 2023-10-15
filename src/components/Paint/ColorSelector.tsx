@@ -14,8 +14,8 @@ const PRESET_COLORS = [
 
 export default function ColorSelector() {
   return (
-    <div class="bg-zinc-300 border-t-2 py-4 px-2 flex items-center gap-2">
-      <ul class="grid gap-x-1 gap-y-0.5 w-fit"
+    <div class="flex gap-2 items-center py-4 px-2 border-t-2 bg-zinc-300">
+      <ul class="grid gap-y-0.5 gap-x-1 w-fit"
         style={{ "grid-template-columns": "repeat(16, 1fr)" }}
       >
         <ColorToggle />
@@ -24,7 +24,7 @@ export default function ColorSelector() {
             <li>
               <button
                 onClick={() => setPrimaryColor(color)}
-                class="w-6 h-6 border-2 border-t-black border-l-black outline-white"
+                class="w-6 h-6 border-2 outline-white border-t-black border-l-black"
                 style={{ "background-color": color }}
               />
             </li>
@@ -44,11 +44,11 @@ function ColorToggle() {
   }
 
   return (
-    <button onClick={toggleColors} class="relative col-span-2 row-span-2 aspect-square border-2 border-t-black border-l-black bg-mesh">
-      <div class="absolute bottom-2 right-2 h-6 w-6 border-2 border-b-black border-r-black"
+    <button onClick={toggleColors} class="relative col-span-2 row-span-2 border-2 aspect-square border-t-black border-l-black bg-mesh">
+      <div class="absolute right-2 bottom-2 w-6 h-6 border-2 border-b-black border-r-black"
         style={{ "background-color": secondaryColor() }}
       />
-      <div class="absolute top-2 left-2 h-6 w-6 border-2 border-t-black border-l-black"
+      <div class="absolute top-2 left-2 w-6 h-6 border-2 border-t-black border-l-black"
         style={{ "background-color": primaryColor() }}
       />
     </button>

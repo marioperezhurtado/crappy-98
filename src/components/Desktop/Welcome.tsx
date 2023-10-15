@@ -18,17 +18,17 @@ export default function Welcome(props: { onClose: () => void }) {
   return (
     <Show when={show()}>
       <div
-        class="fixed top-1/3 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-xl border-2 border-r-zinc-500 border-b-zinc-500 shadow-md"
+        class="fixed left-1/2 top-1/3 w-full max-w-xl border-2 shadow-md -translate-x-1/2 -translate-y-1/2 border-r-zinc-500 border-b-zinc-500"
 
       >
-        <header class="bg-gradient-to-r from-blue-900 via-blue-900 to-blue-600 px-1 py-0.5 flex justify-between items-center">
+        <header class="flex justify-between items-center py-0.5 px-1 bg-gradient-to-r from-blue-900 via-blue-900 to-blue-600">
           <div class="flex gap-2 items-center text-sm">
             <img src="/windows.png" alt="Windows" class="h-4" />
             <h1 class="text-white">Welcome to Crappy 98</h1>
           </div>
           <button
             onClick={handleClose}
-            class="bg-zinc-300 w-5 h-5 aspect-square border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center justify-center font-bold">
+            class="flex justify-center items-center w-5 h-5 font-bold border-2 border-black bg-zinc-300 aspect-square border-t-zinc-100 border-l-zinc-100">
             <img src="/window/close.svg" alt="Close" class="-mt-1" />
           </button>
         </header>
@@ -47,15 +47,15 @@ export default function Welcome(props: { onClose: () => void }) {
               <span class="w-full bg-green-500" />
               <span class="w-full bg-gradient-to-r from-blue-500 to-[#DCE7F6]" />
             </div>
-            <h1 class="font-bold text-2xl ml-12">
+            <h1 class="ml-12 text-2xl font-bold">
               Crappy
-              <span class="font-normal ml-0.5">98</span>
+              <span class="ml-0.5 font-normal">98</span>
             </h1>
           </div>
 
-          <div class="flex gap-5 items-start pr-3 pt-5">
+          <div class="flex gap-5 items-start pt-5 pr-3">
             <section class="w-56 min-w-fit">
-              <p class="bg-black text-white pl-4 tracking-[0.4rem] text-xs border-b-2 border-zinc-300">
+              <p class="pl-4 text-xs text-white bg-black border-b-2 tracking-[0.4rem] border-zinc-300">
                 CONTENTS
               </p>
               <ContentItem color="#009CFF" title="Register Now" />
@@ -65,7 +65,7 @@ export default function Welcome(props: { onClose: () => void }) {
             </section>
 
             <section class="flex flex-col gap-3 leading-5">
-              <h1 class="font-bold text-lg tracking-wider">Welcome</h1>
+              <h1 class="text-lg font-bold tracking-wider">Welcome</h1>
               <p>Welcome to the exciting new world of Crappy 98, where your web browser takes a nostalgic trip back in time!
               </p>
               <p>Sit back and relax as you take a brief tour of the options available on this website.</p>
@@ -73,7 +73,7 @@ export default function Welcome(props: { onClose: () => void }) {
             </section>
           </div>
 
-          <div class="pt-10 flex p-3 justify-between items-center">
+          <div class="flex justify-between items-center p-3 pt-10">
             <div class="flex gap-2 items-center text-sm">
               <input
                 type="checkbox"
@@ -85,7 +85,7 @@ export default function Welcome(props: { onClose: () => void }) {
             </div>
             <button
               onClick={handleClose}
-              class="bg-zinc-300 px-6 py-0.5 border-2 border-b-black border-r-black text-sm">
+              class="py-0.5 px-6 text-sm border-2 bg-zinc-300 border-b-black border-r-black">
               <span class="underline">C</span>lose
             </button>
           </div>
@@ -98,9 +98,9 @@ export default function Welcome(props: { onClose: () => void }) {
 
 function ContentItem(props: { color: string, title: string }) {
   return (
-    <div class="flex gap-3 border-b-2 pr-3 border-zinc-300">
+    <div class="flex gap-3 pr-3 border-b-2 border-zinc-300">
       <span class="w-1" style={{ "background-color": props.color }} />
-      <h2 class="font-bold text-sm">{props.title}</h2>
+      <h2 class="text-sm font-bold">{props.title}</h2>
     </div>
   );
 }

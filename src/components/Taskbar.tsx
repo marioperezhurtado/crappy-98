@@ -5,7 +5,7 @@ import { programs } from "~/data/programs";
 
 export default function Taskbar() {
   return (
-    <footer class="bg-zinc-300 pt-1.5 flex items-center justify-between text-sm">
+    <footer class="flex justify-between items-center pt-1.5 text-sm bg-zinc-300">
       <ul class="flex gap-2">
         <ProgramButton href="/" title="Start" icon="windows.png" />
         <Separator />
@@ -28,14 +28,14 @@ function ProgramButton(props: AnchorProps & { title: string, icon: string }) {
     <li>
       <A
         href={props.href}
-        class="bg-zinc-300 px-1 border-black border-2 border-t-zinc-100 border-l-zinc-100 flex items-center gap-1 hover:border-t-black hover:border-l-black hover:border-zinc-100 transition"
+        class="flex gap-1 items-center px-1 border-2 border-black transition bg-zinc-300 border-t-zinc-100 border-l-zinc-100 hover:border-t-black hover:border-l-black hover:border-zinc-100"
         classList={{
           "border-zinc-100 !border-t-black !border-l-black bg-mesh": isActive
         }}>
         <img
           src={props.icon}
           alt={props.title}
-          class="h-4 w-4 object-contain"
+          class="object-contain w-4 h-4"
           height="16"
           width="16"
         />
@@ -46,7 +46,7 @@ function ProgramButton(props: AnchorProps & { title: string, icon: string }) {
 }
 
 function Separator() {
-  return <span class="border-l-2 border-r-2 border-l-zinc-400 w-px h-6 bg-red-500" />;
+  return <span class="w-px h-6 bg-red-500 border-r-2 border-l-2 border-l-zinc-400" />;
 }
 
 function Time() {

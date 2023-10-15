@@ -48,21 +48,21 @@ export default function Clippy() {
           ref={clippy}
           src="/clippy/clippy.webp"
           alt="Clippy"
-          class="w-20 absolute top-0 z-20"
+          class="absolute top-0 z-20 w-20"
         />
         <img
           src="/clippy/eye.webp"
           alt="Clippy's eye"
-          class="w-3 absolute top-[0.9rem] left-[1rem] z-20"
+          class="absolute z-20 w-3 top-[0.9rem] left-[1rem]"
           style={{ transform: `rotate(${rotation()}deg)` }}
         />
         <img
           src="/clippy/eye.webp"
           alt="Clippy's eye"
-          class="w-3 absolute top-[1.1rem] right-[2.1rem] z-20"
+          class="absolute z-20 w-3 top-[1.1rem] right-[2.1rem]"
           style={{ transform: `rotate(${rotation()}deg)` }}
         />
-        <div class="absolute right-0 -top-full translate-y-3 bg-yellow-100 p-2 rounded-md border border-black shadow-md w-44">
+        <div class="absolute right-0 -top-full p-2 w-44 bg-yellow-100 rounded-md border border-black shadow-md translate-y-3">
           <p class="text-xs">
             Hi! It's me, Clippy. It's been a while, hasn't it? I'm glad to see you again!
           </p>

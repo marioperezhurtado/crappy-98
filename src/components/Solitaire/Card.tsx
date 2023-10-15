@@ -14,7 +14,7 @@ export default function Card(props: { suit: Suit, rank: number }) {
 
   return (
     <div
-      class="relative w-32 aspect-[2.5/3.5] bg-white border-black border-2 rounded-lg font-bold shadow-md text-digital"
+      class="relative w-32 font-bold bg-white rounded-lg border-2 border-black shadow-md aspect-[2.5/3.5] text-digital"
       classList={{ "text-red-500": props.suit === "hearts" || props.suit === "diamonds" }}
     >
       <RankLabel {...props} icon={icon} />
@@ -39,7 +39,7 @@ function RankLabel(props: { suit: Suit, rank: number, icon: string }) {
         <p>{label}</p>
         {props.icon}
       </div>
-      <div class="absolute bottom-0 right-0.5 rotate-180 text-center">
+      <div class="absolute bottom-0 right-0.5 text-center rotate-180">
         <p>{label}</p>
         {props.icon}
       </div>
@@ -82,27 +82,27 @@ function DisplayCard(props: { suit: Suit, rank: number, icon: string }) {
       </Show>
       {/* sides center */}
       <Show when={props.rank >= 6 && props.rank <= 8}>
-        <div class="absolute top-1/2 left-6 -translate-y-1/2">
+        <div class="absolute left-6 top-1/2 -translate-y-1/2">
           {props.icon}
         </div>
-        <div class="absolute top-1/2 right-6 -translate-y-1/2">
+        <div class="absolute right-6 top-1/2 -translate-y-1/2">
           {props.icon}
         </div>
       </Show>
       {/* double center */}
       <Show when={props.rank === 8 || props.rank === 10}>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-4">
+        <div class="flex absolute top-1/2 left-1/2 flex-col gap-4 -translate-x-1/2 -translate-y-1/2">
           <div>{props.icon}</div>
           <div>{props.icon}</div>
         </div>
       </Show>
       {/* double sides */}
       <Show when={props.rank === 9 || props.rank === 10}>
-        <div class="absolute top-1/2 left-6 -translate-y-1/2 flex flex-col gap-4">
+        <div class="flex absolute left-6 top-1/2 flex-col gap-4 -translate-y-1/2">
           <div>{props.icon}</div>
           <div>{props.icon}</div>
         </div>
-        <div class="absolute top-1/2 right-6 -translate-y-1/2 flex flex-col gap-4">
+        <div class="flex absolute right-6 top-1/2 flex-col gap-4 -translate-y-1/2">
           <div>{props.icon}</div>
           <div>{props.icon}</div>
         </div>
@@ -111,14 +111,13 @@ function DisplayCard(props: { suit: Suit, rank: number, icon: string }) {
       <Show when={props.rank === 11}>
         <img
           src="/solitaire/jack.webp"
-          class="border-2 w-[84px] h-36 border-black object-cover
-          absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          class="object-cover absolute top-1/2 left-1/2 h-36 border-2 border-black -translate-x-1/2 -translate-y-1/2 w-[84px]"
           width="84"
         />
-        <div class="absolute right-6 top-5">
+        <div class="absolute top-5 right-6">
           {props.icon}
         </div>
-        <div class="absolute left-6 bottom-5">
+        <div class="absolute bottom-5 left-6">
           {props.icon}
         </div>
       </Show>
@@ -126,14 +125,13 @@ function DisplayCard(props: { suit: Suit, rank: number, icon: string }) {
       <Show when={props.rank === 12}>
         <img
           src="/solitaire/queen.webp"
-          class="border-2 w-[84px] h-36 border-black object-cover
-          absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          class="object-cover absolute top-1/2 left-1/2 h-36 border-2 border-black -translate-x-1/2 -translate-y-1/2 w-[84px]"
           width="84"
         />
-        <div class="absolute right-6 top-5">
+        <div class="absolute top-5 right-6">
           {props.icon}
         </div>
-        <div class="absolute left-6 bottom-5">
+        <div class="absolute bottom-5 left-6">
           {props.icon}
         </div>
       </Show>
@@ -141,14 +139,13 @@ function DisplayCard(props: { suit: Suit, rank: number, icon: string }) {
       <Show when={props.rank === 13}>
         <img
           src="/solitaire/king.webp"
-          class="border-2 w-[84px] h-36 border-black object-cover
-          absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          class="object-cover absolute top-1/2 left-1/2 h-36 border-2 border-black -translate-x-1/2 -translate-y-1/2 w-[84px]"
           width="84"
         />
-        <div class="absolute left-6 top-5">
+        <div class="absolute top-5 left-6">
           {props.icon}
         </div>
-        <div class="absolute right-6 bottom-5">
+        <div class="absolute bottom-5 right-6">
           {props.icon}
         </div>
       </Show>

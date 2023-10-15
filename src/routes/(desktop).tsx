@@ -10,7 +10,7 @@ const [showWelcome, setShowWelcome] = createSignal(true);
 export default function Home() {
   return (
     <>
-      <main class="h-screen overflow-hidden flex flex-col select-none">
+      <main class="flex overflow-hidden flex-col h-screen select-none">
         <div class="p-1.5 bg-[#008280] h-full">
           <div class="flex flex-col gap-3 items-center w-fit">
             <DesktopIcon icon="/desktop/bin.png" title="Recycle Bin" />
@@ -26,13 +26,13 @@ export default function Home() {
             <a
               href="https://marioph.com"
               target="_blank"
-              class="underline ml-1"
+              class="ml-1 underline"
             >
               Mario
             </a>
           </p>
         </div>
-        <div class="p-1.5 pt-0 bg-zinc-300 border-t-2">
+        <div class="p-1.5 pt-0 border-t-2 bg-zinc-300">
           <Taskbar />
         </div>
       </main>
